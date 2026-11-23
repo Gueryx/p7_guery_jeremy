@@ -26,7 +26,7 @@ async function getWorks() {
 
 // Fonction chargée de créer et d'ajouter les éléments HTML pour chaque travail dans la galerie
 function displayWorks(works) {
-    // Sélectionne la <div class"'gallery"> présent dans l'HTML
+    // Récupère la <div class="gallery"> présent dans l'HTML
     const gallery = document.querySelector(".gallery");
 
     // Sécurité au cas où la classe .gallery n'existe pas dans le HTML
@@ -39,7 +39,7 @@ function displayWorks(works) {
     gallery.innerHTML = "";
 
     // Parcourt chaque objet "work" du tableau reçu depuis l'API
-    // forEach donne directement chaque élément un à un de "work" 
+    // forEach exécute une fonction une fois pour chaque élément du tableau 
     works.forEach(work => {
         // Crée un élément <figure> pour chaque travail
         const figure = document.createElement("figure");
